@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    image: '${COMPOSE_PROJECT_NAME}/${project_dirname}:latest'
+    ports:
+      - 80:8000
+    restart: unless-stopped
+    mem_limit: 1000m
+    networks:
+      - net
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "500"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./app/aioe/:/app/aioe/
+      - ./app/main.py:/app/main.py
+      - ./app/static:/app/static
+    command:
+      - "uvicorn"
+      - "main:app"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8000"
+
+networks:
+  net:

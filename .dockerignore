@@ -1,0 +1,12 @@
+# Exclude common unwanted files
+*.pyc
+__pycache__
+
+# Allow __init__.py
+!__init__.py
+
+# node
+**/node_modules
+
+# python
+**/*venv*/

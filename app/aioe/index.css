@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 10px;
+  /* Space from this element (entire page) and others*/
+  padding: 10px;
+  /*space from content and border*/
+}
+
+.tab {
+  display: none;
+}
+
+.tab-container {
+  margin-bottom: 20px;
+}
+
+.tablinks {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.image-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.image-list li {
+  /*display: inline-block;*/
+  margin: 10px;
+}
+
+.image-list li a {
+  text-decoration: none;
+}
+
+.image-list li img {
+  width: 300px;
+  /* Adjust image size as needed */
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.image-list li img:hover {
+  transform: scale(1.5);
+}
