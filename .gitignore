@@ -1,0 +1,12 @@
+*.pem
+*.log
+pgdata/
+postgres
+*.csv
+container-monitor/
+
+# Grafana ignore
+grafana_logs/
+grafana_data/
+grafana_plugins/
+grafana_provisioning/
