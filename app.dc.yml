@@ -15,7 +15,7 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ./app/aioe/:/app/aioe/
+      - ./app/home/:/app/home/
       - ./app/main.py:/app/main.py
       - ./app/static:/app/static
     command:

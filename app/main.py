@@ -20,15 +20,15 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.mount(
-    "/aioe",
-    StaticFiles(directory="aioe", html=True),
-    name="aioe",
+    "/home",
+    StaticFiles(directory="home", html=True),
+    name="home",
 )
 
 
 @app.get("/")
 async def landingpage():
-    response = RedirectResponse(url="/aioe")
+    response = RedirectResponse(url="/home")
     return response
 
 
