@@ -13,13 +13,22 @@ function generateTabButtons() {
 // Function to populate tabs with images
 function populateTabs() {
     datas.forEach((data, index) => {
+        // Create tab class
         const tab = document.createElement('div');
         tab.id = `tab${index + 1}`;
         tab.classList.add('tab');
+
+        // Create title text
+        const title_text = document.createElement('h3');
+        title_text.innerHTML = data.tabName;
+
+        // Create image list
         console.log(data);
-        images = data.images;
         const ul = document.createElement('ul');
         ul.classList.add('image-list');
+        ul.appendChild(title_text);
+
+        images = data.images;
         images.forEach(image => {
             const li = document.createElement('li');
 
@@ -27,18 +36,20 @@ function populateTabs() {
             img.src = image.src;
             img.alt = image.src.split('.')[0]; // Assuming image names are unique
 
-            const a_link = document.createElement('a');
-            a_link.href = image.link;
+            const image_link = document.createElement('a');
+            image_link.href = image.href;
 
-            const image_text = document.createElement('p')
+            const image_text = document.createElement('a')
+            image_text.href = image.href;
             image_text.innerText = image.text;
 
-            a_link.appendChild(img)
-            li.appendChild(a_link);
+            image_link.appendChild(img)
+            // li.appendChild(image_link);
             li.appendChild(image_text);
 
             ul.append(li);
         });
+
         tab.append(ul);
         document.body.appendChild(tab);
     });

@@ -1,30 +1,59 @@
 // Data for tabs and images
 const datas = [
-    { tabName: 'Laneguard', images: [
-            { src: 'image1.jpg', link: '/image1.jpg', text: 'image1'
+    {
+        tabName: 'Laneguard', images: [
+            {
+                src: '/image1.jpg', href: 'https://54.179.199.194:20302/docs', text: 'Backend'
             },
-            { src: 'image2.jpg', link: '/image1.jpg', text: 'image1'
+            {
+                src: '/image1.jpg', href: 'http://54.179.199.194:20303', text: 'Pgadmin'
             },
-            { src: 'image3.jpg', link: '/image1.jpg', text: 'image1'
+            {
+                src: '/image1.jpg', href: 'http://54.179.199.194:20304', text: 'Grafana Page'
+            },
+            {
+                src: '/image1.jpg', href: 'http://54.179.199.194:20305/advance-search', text: 'Advance Search'
+            },
+            {
+                src: '/image1.jpg', href: 'http://54.179.199.194:20305/dashboard', text: 'Dashboard List'
             }
         ]
     },
-    { tabName: 'ARTIS', images: [
-            { src: 'image4.jpg', link: '/image1.jpg', text: 'image1'
+    {
+        tabName: 'ARTIS', images: [
+            {
+                src: '/image1.jpg', href: 'http://47.128.239.124:20602/docs', text: 'Backend'
             },
-            { src: 'image5.jpg', link: '/image1.jpg', text: 'image1'
+            {
+                src: '/image1.jpg', href: 'http://47.128.239.124:20603', text: 'Pgadmin'
             },
-            { src: 'image6.jpg', link: '/image1.jpg', text: 'image1'
+            {
+                src: '/image1.jpg', href: 'http://47.128.239.124:20604', text: 'Grafana Page'
             }
         ]
     },
-    { tabName: 'Tab3', images: [
-            { src: 'image7.jpg', link: '/image1.jpg', text: 'image1'
+    {
+        tabName: 'ModelApi', images: [
+            {
+                src: '/image1.jpg', href: 'http://54.179.214.70:4896', text: 'InsightAPI'
             },
-            { src: 'image8.jpg', link: '/image1.jpg', text: 'image1'
-            },
-            { src: 'image9.jpg', link: '/image1.jpg', text: 'image1'
+            {
+                src: '/image1.jpg', href: 'http://54.179.214.70:4896/insight', text: 'InsightAPI Developer'
             }
+        ]
+    },
+    {
+        tabName: 'Recogine', images: [
+            {
+                src: '', href: 'https://recogine.000webhostapp.com/', text: 'RecoTraffic LPR: ETC Series Online Software Hub'
+
+            },
+            {
+                src: '', href: 'https://recogine.com/', text: 'Recogine Company Webpage'
+
+            },
         ]
     }
+
+
 ];
