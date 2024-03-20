@@ -1,2 +1,2 @@
-ubuntu@47.128.239.124
-l4-aws-20240307.pem
+ubuntu@54.255.190.173
+recocloud-rose-20240320.pem
