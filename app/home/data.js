@@ -20,7 +20,7 @@ const datas = [
         ]
     },
     {
-        tabName: 'ARTIS', images: [
+        tabName: 'L4/ITA', images: [
             {
                 src: '/image1.jpg', href: 'http://47.128.239.124:20602/docs', text: 'Backend'
             },

@@ -4,15 +4,32 @@
   /* Space from this element (entire page) and others*/
   padding: 10px;
   /*space from content and border*/
+  font-family: 'Times New Roman', serif;
+  /* font-family: Arial, sans-serif; */
+  /* Elegant font */
+  box-sizing: border-box;
+
+}
+
+/* Tab related */
+.tab-container {
+  margin-bottom: 20px;
+  margin: 0 25%;
+  /* border: 1px solid red; */
+  color: #1a1a1a;
 }
 
 .tab {
   display: none;
+  margin: 0 25%;
+  /* border: 1px solid red; */
 }
 
-.tab-container {
-  margin-bottom: 20px;
+.tab h3 {
+  margin-bottom: 50px ;
+  color: #1a1a1a;
 }
+
 
 .tablinks {
   background-color: #f2f2f2;
@@ -30,20 +47,20 @@
   background-color: #ccc;
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
+/* image list */
 
 .image-list {
   list-style-type: none;
-  padding: 0;
+  margin: 0;
   text-align: center;
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .image-list li {
   /*display: inline-block;*/
   margin: 10px;
+  /* border: 1px solid red; */
 }
 
 .image-list li a {
@@ -61,4 +78,50 @@ body {
 
 .image-list li img:hover {
   transform: scale(1.5);
+}
+
+/* Wave text font */
+@keyframes wave {
+
+  0%,
+  100% {
+    color: #1a1a1a;
+    /* Black */
+    text-shadow: 0 0 5px #ffcccb;
+    /* Rose gold */
+  }
+
+  58% {
+    color: #3d0303;
+    /* Dark red */
+    text-shadow: 0 0 3px #c7a96d;
+    /* Gold */
+  }
+
+  66% {
+    color: #540101;
+    /* Dark red */
+    text-shadow: 0 0 3px #f5e89e;
+    /* Gold */
+  }
+
+  82% {
+    color: #540101;
+    /* Dark red */
+    text-shadow: 0 0 5px #f5e89e;
+    /* Gold */
+  }
+
+  90% {
+    color: #3d0303;
+    /* Dark red */
+    text-shadow: 0 0 5px #c7a96d;
+    /* Gold */
+  }
+}
+
+.wave-text {
+  display: inline-block;
+  animation: wave 6s ease-in-out infinite;
+  /* Slower cycle */
 }

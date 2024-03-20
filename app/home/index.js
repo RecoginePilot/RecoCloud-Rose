@@ -5,6 +5,7 @@ function generateTabButtons() {
         const button = document.createElement('button');
         button.textContent = data.tabName;
         button.classList.add('tablinks');
+        button.classList.add('wave-text');
         button.addEventListener('click', () => openTab(event, `tab${index + 1}`));
         tabContainer.appendChild(button);
     });
@@ -20,6 +21,7 @@ function populateTabs() {
 
         // Create title text
         const title_text = document.createElement('h3');
+        title_text.classList.add('wave-text');
         title_text.innerHTML = data.tabName;
 
         // Create image list
