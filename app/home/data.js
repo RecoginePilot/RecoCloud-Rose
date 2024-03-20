@@ -61,7 +61,7 @@ const datas = [
 
             },
             {
-                src: '', href: 'https://live.talentoz.com', text: 'Telentoz'
+                src: '', href: 'https://live.talentoz.com', text: 'Talentoz'
 
             },
             {
