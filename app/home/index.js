@@ -23,7 +23,6 @@ function populateTabs() {
         title_text.innerHTML = data.tabName;
 
         // Create image list
-        console.log(data);
         const ul = document.createElement('ul');
         ul.classList.add('image-list');
         ul.appendChild(title_text);
