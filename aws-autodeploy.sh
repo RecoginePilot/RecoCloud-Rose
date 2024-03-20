@@ -11,6 +11,9 @@ EC2_IP="$(head -n1 aws-ec2.txt)"
 PROJ_RPATH=$(realpath -s --relative-to="$HOME" "$(pwd)")/
 KEY_LOC="$(tail -n1 aws-ec2.txt)"
 
+# PARAM
+SYNC_COMMAND="cd ~/${PROJ_RPATH};./script/app-deploy.sh"
+
 echo "PROJ_RPATH: $PROJ_RPATH"
 
 # step1
@@ -19,6 +22,6 @@ echo "Sync aws stuff"
 
 # step2
 echo "Deploy AWS Stuff..."
-ssh -i "${KEY_LOC}" "${EC2_IP}" "cd ~/${PROJ_RPATH};./script/app-deploy.sh"
+ssh -i "${KEY_LOC}" "${EC2_IP}" "${SYNC_COMMAND}"
 
 echo "Job dones!"
