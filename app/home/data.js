@@ -53,7 +53,29 @@ const datas = [
 
             },
         ]
+    },
+    {
+        tabName: 'Employee', images: [
+            {
+                src: '', href: 'https://webmail.evd.com.my', text: 'EVD Webmail'
+
+            },
+            {
+                src: '', href: 'https://live.talentoz.com', text: 'Telentoz'
+
+            },
+            {
+                src: '', href: 'http://172.17.0.129', text: 'Gitlab'
+
+            },
+            {
+                src: '', href: 'https://chat.openai.com', text: 'ChatGPT'
+
+            },
+        ]
+    },
+    {
+        tabName: 'Misc', images: [
+        ]
     }
-
-
 ];
