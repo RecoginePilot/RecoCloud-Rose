@@ -3,7 +3,7 @@ services:
   app:
     image: '${COMPOSE_PROJECT_NAME}/${project_dirname}:latest'
     restart: unless-stopped
-    mem_limit: 1000m
+    mem_limit: 300m
     networks:
       - net
     logging:
