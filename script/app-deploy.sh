@@ -9,10 +9,12 @@ SERVICE_NAME="app"
 
 # step2. down the server
 docker-compose \
+    -f "${WORK_DIR}"/base.dc.yml \
     -f "${WORK_DIR}"/"${SERVICE_NAME}".dc.yml \
     down
 
 # step4. up the server
 docker-compose \
+    -f "${WORK_DIR}"/base.dc.yml \
     -f "${WORK_DIR}"/"${SERVICE_NAME}".dc.yml \
     up -d
