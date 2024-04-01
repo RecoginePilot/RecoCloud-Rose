@@ -41,6 +41,11 @@ function populateTabs() {
             image_link.href = image.href;
 
             const image_text = document.createElement('a')
+            // open in neew tab, avoid security concern
+            // https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+            image_text.target = "_blank"
+            image_text.rel = "noopener noreferrer"
+
             image_text.href = image.href;
             image_text.innerText = image.text;
 
