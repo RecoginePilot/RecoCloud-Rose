@@ -58,6 +58,8 @@ DOOR_MAP = {
 def call_url(door_id: str):
     """Open the `main`, `1` or `2` door."""
     url = DOOR_MAP.get(door_id)
+    if url is None:
+        return {"status_code": 404, "content": "Invalid door_id"}
     response = requests.get(url)
     return {"status_code": response.status_code, "content": response.text}
 
