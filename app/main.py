@@ -41,3 +41,23 @@ async def root():
         return {"code": 1, "detail": "online"}
     except:
         raise HTTPException(status_code=404, detail="offline")
+
+################################################
+### Custom endpoint for door opening service ###
+################################################
+import requests
+
+DOOR_MAP = {
+    "main": "http://172.17.0.77/3I_O.htm?R=Pulse+Door+Open+First+Door",
+    "1": "http://172.17.0.78/3I_O.htm?R=Pulse+Door+Open+First+Door",
+    "2": "http://172.17.0.79/3I_O.htm?R=Pulse+Door+Open+First+Door",
+}
+
+
+@app.get("/open-door/{str: door_id}")
+def call_url(door_id: str):
+    """Open the `main`, `1` or `2` door."""
+    url = DOOR_MAP.get(door_id)
+    response = requests.get(url)
+    return {"status_code": response.status_code, "content": response.text}
+
