@@ -76,6 +76,18 @@ const datas = [
     },
     {
         tabName: 'Misc', images: [
+            {
+                src: '', href: '/#', text: 'Main Entrance'
+
+            },
+            {
+                src: '', href: '/#', text: '1st Floor Door'
+
+            },
+            {
+                src: '', href: 'http://172.17.0.79/3I_O.htm?R=Pulse+Door+Open+First+Door', text: '2nd Floor Door'
+
+            },
         ]
     }
 ];
