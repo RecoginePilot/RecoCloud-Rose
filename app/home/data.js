@@ -77,15 +77,27 @@ const datas = [
     {
         tabName: 'Misc', images: [
             {
-                src: '', href: 'http://172.17.0.77/3I_O.htm?R=Pulse+Door+Open+First+Door', text: 'Main Entrance'
+                src: '', href: 'http://175.143.102.45:4896/open-door/main', text: 'Main Entrance'
 
             },
             {
-                src: '', href: 'http://172.17.0.78/3I_O.htm?R=Pulse+Door+Open+First+Door', text: '1st Floor Door'
+                src: '', href: 'http://175.143.102.45:4896/open-door/1', text: '1st Floor Door'
 
             },
             {
-                src: '', href: 'http://172.17.0.79/3I_O.htm?R=Pulse+Door+Open+First+Door', text: '2nd Floor Door'
+                src: '', href: 'http://175.143.102.45:4896/open-door/2', text: '2nd Floor Door'
+
+            },
+            {
+                src: '', href: 'http://172.17.0.77/3I_O.htm?R=Pulse+Door+Open+First+Door', text: 'Main Entrance (local)'
+
+            },
+            {
+                src: '', href: 'http://172.17.0.78/3I_O.htm?R=Pulse+Door+Open+First+Door', text: '1st Floor Door  (local)'
+
+            },
+            {
+                src: '', href: 'http://172.17.0.79/3I_O.htm?R=Pulse+Door+Open+First+Door', text: '2nd Floor Door  (local)'
 
             },
         ]
