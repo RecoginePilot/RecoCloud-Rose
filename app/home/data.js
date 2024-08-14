@@ -77,15 +77,15 @@ const datas = [
     {
         tabName: 'Misc', images: [
             {
-                src: '', href: '/open-door/main', text: 'Main Entrance'
+                src: '', href: 'http://175.143.102.45:4896/open-door/main', text: 'Main Entrance'
 
             },
             {
-                src: '', href: '/open-door/1', text: '1st Floor Door'
+                src: '', href: 'http://175.143.102.45:4896/open-door/1', text: '1st Floor Door'
 
             },
             {
-                src: '', href: '/open-door/2', text: '2nd Floor Door'
+                src: '', href: 'http://175.143.102.45:4896/open-door/2', text: '2nd Floor Door'
 
             },
             {
