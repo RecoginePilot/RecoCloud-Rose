@@ -45,7 +45,7 @@ const datas = [
     {
         tabName: 'Recogine', images: [
             {
-                src: '', href: 'https://recogine.000webhostapp.com/', text: 'RecoTraffic LPR: ETC Series Online Software Hub'
+                src: '', href: 'https://recogine.wuaze.com/', text: 'RecoTraffic LPR: ETC Series Online Software Hub'
 
             },
             {
