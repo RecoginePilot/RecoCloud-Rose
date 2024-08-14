@@ -54,7 +54,7 @@ DOOR_MAP = {
 }
 
 
-@app.get("/open-door/{str: door_id}")
+@app.get("/open-door/{door_id}")
 def call_url(door_id: str):
     """Open the `main`, `1` or `2` door."""
     url = DOOR_MAP.get(door_id)
