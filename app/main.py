@@ -26,10 +26,27 @@ app.mount(
 )
 
 
+# @app.get("/")
+# async def landingpage():
+#     response = RedirectResponse(url="/home")
+#     return response
+
+from fastapi import Request
 @app.get("/")
-async def landingpage():
-    response = RedirectResponse(url="/home")
-    return response
+def root_print_get(request: Request):
+    query_params = request.query_params
+    print(f"Received GET query parameters: {query_params}")
+    return {"message": "Query parameters received", "query_params": dict(query_params)}
+
+
+# POST endpoint
+@app.post("/")
+async def root_print_post(request: Request):
+    raw_body = await request.body()
+    print(f"Received POST raw body: {raw_body.decode('utf-8')}")
+    return {"message": "Raw body received", "raw_body": raw_body.decode("utf-8")}
+
+
 
 
 @app.get("/status")
