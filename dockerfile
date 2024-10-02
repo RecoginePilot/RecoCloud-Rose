@@ -6,6 +6,6 @@ WORKDIR /app
 
 # Install python dependencies
 COPY ./app/requirements.lock.txt /app/
-COPY ./hypercorn.toml /app/
+COPY ./app/hypercorn.toml /app/
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.lock.txt
