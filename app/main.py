@@ -82,10 +82,24 @@ def root_print_get(request: Request):
 
 
 # POST endpoint
+from datetime import datetime
 @app.post("/")
 async def root_print_post(request: Request):
     raw_body = await request.body()
     logging.info(f"Received POST raw body: '{raw_body.decode('utf-8')}'")
+
+    body_content = raw_body.decode('utf-8')
+
+    # Log the received raw body
+    logging.info(f"Received POST raw body: '{body_content}'")
+
+    # Create a unique filename using the current timestamp
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")
+    filename = f"static/body_{timestamp}.txt"
+
+    # Write the raw body to the file
+    with open(filename, "w") as file:
+        file.write(body_content)
     return {"message": "Raw body received", "raw_body": raw_body.decode("utf-8")}
 
 
