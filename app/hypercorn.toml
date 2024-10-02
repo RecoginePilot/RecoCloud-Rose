@@ -1,0 +1,22 @@
+# hypercorn.toml
+
+# Enable HTTP/2 support
+alpn_protocols = ['h2', 'http/1.1']
+
+# Set the binding IP and port
+bind = ["0.0.0.0:8000"]
+
+# Timeout settings (adjust if needed)
+timeout_keep_alive = 5
+graceful_timeout = 10
+
+# Access and error logging
+accesslog = "-"
+errorlog = "-"
+
+# Set workers to handle multiple requests in parallel (adjust based on your server's CPU)
+workers = 2
+
+# Optionally enable SSL for HTTPS/HTTP2 (if you need secure communication)
+# certfile = "/path/to/certificate.pem"
+# keyfile = "/path/to/key.pem"

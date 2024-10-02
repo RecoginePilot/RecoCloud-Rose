@@ -161,7 +161,6 @@ cython_debug/
 
 # Custom ignore
 migrations
-*.toml
 private
 
 frontend/
