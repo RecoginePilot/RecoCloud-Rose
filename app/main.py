@@ -17,6 +17,45 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from starlette.middleware.base import BaseHTTPMiddleware
+import logging
+from fastapi import Request
+
+# Configure logging to include timestamp
+logging.basicConfig(
+    format='%(levelname)s> %(message)s',
+    level=logging.INFO
+)
+
+class LogRequestMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        # Log request method and URL
+        logging.info("<<<<<<<   Request   >>>>>>>")
+        logging.info(f"Request URL: {request.url}")
+        logging.info(f"Request Method: {request.method}")
+
+        # Log headers
+        logging.info("-------   Headers   -------")
+        for name, value in request.headers.items():
+            logging.info(f"{name}: {value}")
+        logging.info("-------End of Headers-------")
+
+        # Log body (if applicable)
+        logging.info("-------   Body   -------")
+        body = await request.body()
+        logging.info(f"Request Body: {body.decode('utf-8')}")
+        logging.info("-------End of Body-------")
+
+        logging.info(">>>>>>>  End of Request   <<<<<<<")
+
+        # Process the request
+        response = await call_next(request)
+
+        return response
+
+# Add the middleware to the app
+app.add_middleware(LogRequestMiddleware)
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.mount(
@@ -38,7 +77,7 @@ from fastapi import Request
 @app.get("/")
 def root_print_get(request: Request):
     query_params = request.query_params
-    print(f"Received GET query parameters: {query_params}")
+    logging.info(f"Received GET query parameters: '{query_params}'")
     return {"message": "Query parameters received", "query_params": dict(query_params)}
 
 
@@ -46,7 +85,7 @@ def root_print_get(request: Request):
 @app.post("/")
 async def root_print_post(request: Request):
     raw_body = await request.body()
-    print(f"Received POST raw body: {raw_body.decode('utf-8')}")
+    logging.info(f"Received POST raw body: '{raw_body.decode('utf-8')}'")
     return {"message": "Raw body received", "raw_body": raw_body.decode("utf-8")}
 
 
